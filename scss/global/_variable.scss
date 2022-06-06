@@ -1,0 +1,76 @@
+$box-shadow:0px 0px 3px rgba(0, 0, 0, 0.25);
+
+
+$text-color: #222;
+$black:#222;
+$primary-color: #55937C;
+$primary-grad: linear-gradient(81.39deg, #54917A 3.01%, #6EC0DA 99.68%);
+$-webkit-primary-grad: -webkit-linear-gradient(81.39deg, #54917A 3.01%, #6EC0DA 99.68%);
+$white:#fff;
+$gray:#FAFAFA;
+$border-gray:#ccc;
+$fukidashi:#F5EBEB;
+$annotation:#888;
+$fukidashi-radius: 5px;
+$btn-radius: 100px;
+$gray:#F6F6F6;
+
+
+/* =====================
+
+  ブレイクポイント用
+
+===================== */
+
+$hd-min: 1300px;
+$desktop-max: 1100px;
+$desktop-md: 1024px;
+$desktop-min: 992px;
+$laptop-max: 991px;
+$laptop-min: 768px;
+$tablet-max: 767px;
+$tablet-min: 576px;
+$mobile-max: 575px;
+
+
+@mixin pc {
+  @media screen and (min-width: $hd-min) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media screen and (min-width: $hd-min) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: $desktop-max) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: $desktop-md) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: $laptop-max) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: $tablet-max) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media screen and (max-width: $mobile-max) {
+    @content;
+  }
+}

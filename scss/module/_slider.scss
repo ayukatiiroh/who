@@ -1,0 +1,101 @@
+@use "../global/variable" as g;
+.section-slider{
+  background: url('/img/bg-slider.jpg') no-repeat bottom right/cover;
+
+  .section-slider__container{
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .slider__item{
+    display:flex;
+    justify-content:space-between;
+    flex-direction:column;
+
+    .slider__item__img{
+      width: 100%;
+    }
+
+    .slider__item__title{
+      margin-top: 32px;
+
+      @include g.sm{
+        margin-top: 16px;
+      }
+    }
+
+    .slider__item__text{
+      margin-top: 16px;
+    }
+  }
+
+  //スリック矢印スタイル//
+  .slick-arrow:before{
+    content:""!important;
+  }
+  
+  .slick-arrow:before{
+    content:""!important;
+    width: 100%!important;
+    height: 100%!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .slick-next{
+    right:24px!important;
+    top: 40%!important;
+
+    @include g.sm{
+    right:4px!important;
+    top: 20%!important;
+    }
+
+    &:before{
+      width: 20px;
+      height: 20px;
+      border-top: 2px solid g.$black;
+      border-right: 2px solid g.$black;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      background-size: contain!important;
+
+      @include g.sm{
+        width: 12px!important;
+        height: 12px!important;
+      }
+    }
+  }
+
+  .slick-prev{
+    left:24px!important;
+    top: 40%!important;
+    z-index: 2;
+
+    @include g.sm{
+      top: 20%!important;
+      left:4px!important;
+      
+    }
+
+    &:before{
+      width: 20px;
+      height: 20px;
+      border-top: 2px solid g.$black;
+      border-left: 2px solid g.$black;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      background-size: contain!important;
+
+      @include g.sm{
+        width: 12px !important;
+        height: 12px !important;
+      }
+    }
+  }
+}

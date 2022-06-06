@@ -1,0 +1,59 @@
+@use "../global/variable" as g;
+.section-voice{
+  background-color: g.$gray;
+
+  .section-voice__container{
+    max-width: 980px;
+    margin: 0px auto;
+  }
+
+  .voice__list{
+    margin-top: 60px;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include g.sm{
+      margin-top: 16px;
+      gap: 16px;
+    }
+  }
+
+  .voice__list__item{
+    background-color: #fff;
+    padding: 16px;
+    width: calc(50% - 16px);
+    max-width: 650px;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+
+    @include g.sm{
+      gap: 8px;
+      width: 100%;
+      flex-direction: row;
+    }
+
+    .voice__list__item__img{
+      max-width: 150px;
+      width: calc(150 / 470 * 100%);
+      @include g.sm{
+        max-width: 90px;
+        width: calc(90 / 345 * 100%);
+      }
+      
+    }
+
+    .voice__list__item__text{
+      width: calc(270 / 470 * 100%);
+
+      @include g.sm{
+        width: 73%;
+      }
+
+      .voice__list__item__info{
+        margin-top: 10px;
+      }
+    }
+  }
+}

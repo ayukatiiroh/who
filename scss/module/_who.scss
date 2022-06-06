@@ -1,0 +1,53 @@
+@use "../global/variable" as g;
+
+.section-who{
+  background: url('/img/bg-who.jpg');
+  background-size:cover;
+  background-position:top left;
+  padding-top: 140px;
+  padding-bottom: 140px;
+
+  @include g.sm{
+    background:  url('/img/bg-who-sp.jpg') no-repeat center left/contain,linear-gradient(0deg, #232323, #232323);
+    padding: 120px 16px;
+  }
+
+  .section-who__container{
+    max-width: 890px;
+    margin: 0 auto;
+    gap: 60px;
+    color: #fff;
+
+    @include g.sm{
+      max-width: 1000%;
+      gap: 32px;
+    }
+  }
+
+  .section-who__title{
+    width: 100%;
+    max-width: 320px;
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 2;
+
+    @include g.sm{
+      font-size: 2.4rem;
+    }
+
+    @include g.xs{
+      line-height: inherit;
+    }
+  }
+
+  .section-who__body{
+    width: 100%;
+    max-width: 520px;
+
+    p{
+      &+p{
+        margin-top: 1.6rem;
+      }
+    }
+  }
+}

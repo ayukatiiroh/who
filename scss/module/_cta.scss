@@ -1,0 +1,41 @@
+@use "../global/variable" as g;
+.section-cta{
+  background: url('/img/bg-cta.jpg');
+  background-size:cover;
+  background-position:center center;
+
+  .section-cta__container {
+    text-align: center;
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+
+  h2{
+    &::after{
+      content: none;
+    }
+
+    @include g.sm{
+      font-size: 2.4rem;
+    }
+  }
+
+  form{
+    p{
+      font-size: 12px;
+      font-weight: 700;
+
+      @include g.sm{
+        font-size: 16px;
+      }
+    }
+
+    input[type="email"]{
+      margin-top: 8px;
+    }
+
+    .annotation{
+      font-size: 12px;
+    }
+  }
+}

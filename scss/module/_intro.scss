@@ -1,0 +1,96 @@
+@use "../global/variable" as g;
+
+.section-intro{
+  .section-intro__container{
+    max-width: 1160px;
+    margin: 0 auto;
+    background: url('/img/bg-intro.jpg');
+    background-size:cover;
+    background-position:top left;
+    box-shadow: 10px 10px 0px #000000;
+    padding: 60px 0 40px;
+
+    @include g.sm{
+      padding:48px 8px;
+      box-shadow: 4px 4px 0px #000000;
+      background: url('/img/bg-intro-sp.jpg');
+      background-position:center right;
+    }
+  }
+  .section-intro__wrapper{
+    max-width: 650px;
+    margin: 0 auto;
+    color: #fff;
+  }
+
+  h3{
+    padding-bottom: 3.5rem;
+    text-align: center;
+    position: relative;
+
+    @include g.sm{
+      padding-bottom: 2.4rem;
+    }
+
+    &::after{
+      content: "";
+      background-image: linear-gradient(to right, #fff, #fff 5px, transparent 5px, transparent 8px);
+      background-size: 8px 1px;
+      background-repeat: repeat-x;
+      display:block;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      @include g.sm{
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .section-intro__list-wrapper{
+    max-width: 535px;
+    margin: 4.5rem auto 0;
+
+    @include g.sm{
+      max-width: 520px;
+      margin: 3.2rem auto 0;  
+    }
+  }
+
+  .section-intro__list-item{
+    position: relative;
+    padding-left:calc(20px + 18px);  /*画像のスペース+余白*/
+    margin-left:1em;
+    
+    background-image: url("/img/icon-intro-list.svg");
+    background-repeat:no-repeat;
+    background-position:left center;
+
+    @include g.sm{
+      padding-left:calc(20px + 8px);  /*画像のスペース+余白*/
+      background-position:left 2px;
+    }
+
+    // &::before{
+    //   content: '';
+    //   display: inline-block;
+    //   background-image: url("/img/icon-intro-list.svg");
+    //   width: 20px;
+    //   height: 20px;
+    //   margin-right: 1.6rem;
+
+    //   @include g.sm{
+    //     margin-right: 0.8rem;
+    //   }
+    // }
+
+    &+.section-intro__list-item{
+      margin-top: 3.5rem;
+
+    }
+  }
+}

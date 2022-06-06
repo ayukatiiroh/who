@@ -1,0 +1,46 @@
+@use "../global/variable" as g;
+.page__header{
+  background: url('/img/bg-page-header.jpg') no-repeat center center/cover;
+  padding:74px 16px ;
+  text-align: center;
+}
+
+.pgae__header__title{
+
+}
+
+.terms{
+  .section-terms{
+    .section-inner{
+      max-width: 940px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include g.sm{
+        max-width: 100%;
+      }
+    }
+  }
+
+  .list__title{
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  .terms-item{
+    &.terms-item{
+      margin-top: 16px;
+    }
+  }
+
+  .paragraph{
+    &+.paragraph{
+      margin-top: 16px;
+    }
+  }
+  .enactment__day{
+    margin-top: 16px;
+  }
+}
+
+

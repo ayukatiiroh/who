@@ -1,0 +1,137 @@
+@use "../global/variable" as g;
+
+.section-feature{
+  background: g.$primary-grad;
+
+  .section-feature__container{
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  .feature-icon__nav__list-sp{
+    overflow-x: scroll;
+    transform: translateZ(0); 
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;
+  
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+
+  .feature-icon__nav__list{
+    margin-top: 60px;
+
+    
+
+    @include g.sm{
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-top: 32px;
+      width:calc(120px * 5); 
+      margin: 32px auto 0;
+    }
+  }
+  
+  .feature-icon__nav-item{
+    @include g.sm{
+      text-align:center;
+      width: 120px;
+    }
+
+    a{
+      display:block;
+    }
+    
+    img{
+      border-radius: 50%;
+      max-width: 150px;
+      margin: 0 auto;
+
+      @include g.sm{
+        max-width: 80px;
+      }
+    }
+    
+    p{
+      margin-top: 1.6rem;
+      text-align: center;
+
+      @include g.sm{
+        font-size: 1.2rem;
+        margin-top: 0.8rem;
+        
+      }
+    }
+
+    &+.feature-icon__nav-item{
+      margin-left: 32px;
+
+      @include g.sm{
+        margin-left: 0px;
+        
+      }
+    }
+  }
+
+  .feature__list{
+    display:flex;
+    justify-content:space-between;
+    flex-direction: column;
+    margin-top: 60px;
+
+    @include g.sm{
+      margin-top: 32px;
+      
+    }
+  }
+
+  .feature__item{
+    background-color: #fff;
+    padding: 32px;
+
+    @include g.sm{
+      border-radius:8px;
+      padding: 32px 16px;
+      flex-direction: column-reverse;
+      gap:16px;
+    }
+
+    &+.feature__item{
+      margin-top: 16px;
+    }
+
+    .feature__item__textwrapper{
+      max-width: 540px;
+      width: 100%;
+    }
+
+    .feature__item__img{
+      max-width: 300px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .zabuton{
+      display: inline-block;
+      background-color: g.$black;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      padding: 2px 1rem;
+
+      @include g.sm{
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    .feature__item__title{
+      margin-top: 16px;
+    }
+
+    .feature__item__body{
+      margin-top: 16px;
+    }
+  }
+}

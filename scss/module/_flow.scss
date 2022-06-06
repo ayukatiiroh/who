@@ -1,0 +1,68 @@
+@use "../global/variable" as g;
+.section-flow{
+  .section-flow__container{
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .flow__list{
+    margin-top: 60px;
+
+    @include g.sm{
+      margin-top: 16px;
+    }
+
+    .flow__list__item{
+      background-color: g.$gray;
+      display:flex;
+      justify-content:space-between;
+      padding: 32px; 
+      align-items: flex-start;
+      gap: 32px;
+
+      @include g.sm{
+        padding: 32px 24px; 
+        gap:16px;
+        flex-direction: column;
+      }
+
+      &:nth-of-type(even){
+        background-color: g.$black;
+        color: #fff;
+      }
+    }
+
+    .flow__list__item__num{
+      font-size: 100px;
+      font-weight: 700;
+      line-height: 0.9;
+
+      @include g.sm{
+        font-size: 75px;
+        
+      }
+
+      span{
+        font-size: 50%;
+        display:block;
+      }
+    }
+
+    .flow__list__item__text__wrapper{
+      font-weight: 700;
+
+      p{
+        margin-top: 16px;
+        font-weight: 500;
+      }
+    }
+
+    .flow__list__item__bg{
+      min-width: 160px;
+
+      @include g.sm{
+        display:none;
+      }
+    }
+  }
+}

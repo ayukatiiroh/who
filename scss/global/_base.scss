@@ -1,0 +1,493 @@
+@use "../global/variable" as g;
+
+//variable
+.hide-sm{
+  @include g.sm{
+    display:none !important;
+  }
+}
+
+.show-sm{
+  display:none !important;
+
+  @include g.sm{
+    display:block !important;
+  }
+}
+
+.hide-xs{
+  @include g.xs{
+    display:none !important;
+  }
+}
+
+.show-xs{
+  display:none !important;
+  @include g.xs{
+    display:block !important;
+  }
+}
+
+section{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-right: 4%;
+  padding-left: 4%;
+
+  @include g.sm{
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+/* =====================
+  
+  font-awesome
+
+===================== */
+.fa-brands{
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+
+  &::before{
+    font-style: normal;
+    font-family: "Font Awesome 5 Brands";
+  }
+}
+
+/* =====================
+  
+  font
+
+===================== */
+h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  
+  @include g.xs{
+    font-size: 2rem;
+  }
+
+  &.section__title{
+    padding-bottom: 1.4rem;
+    position: relative;
+    text-align: center;
+
+    &::after{
+      content: "";
+      display:block;
+      width: 56px;
+      height: 4px;
+      background-color:#55937C;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include g.sm{
+        height: 3px;
+      }
+    }
+
+    &.text-color-white{
+      &::after{
+        background-color:#fff;
+      }
+    }
+  }
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  
+  @include g.xs{
+    font-size: 2rem;
+
+  }
+}
+
+h4{
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  @include g.xs{
+    font-size: 2rem;
+  }
+}
+
+h5{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+
+p {
+  font-size: 1.6rem;
+
+  @include g.xs{
+  }
+}
+
+.annotation{
+  color: #888888;
+  font-size: 1.2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-color-primary {
+  color: g.$primary-color;
+}
+
+.text-color-black{
+  color: g.$black ;
+}
+
+.text-color-white{
+  color: g.$white;
+}
+
+figure{
+  margin: 0;
+}
+
+img{
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.section-full{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.relative{
+  position: relative;
+}
+
+.flex{
+  display:flex;
+  justify-content:space-between;
+
+  @include g.sm{
+    flex-direction: column;
+  }
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+form{
+  margin-top: 8px;
+  p{
+    margin-top: 8px;
+  }
+
+  input:not([type="submit"]){
+    padding: 8px;
+    font-size: 16px;
+    border:solid 1px #E6E6E6;
+    background-color: #fff;
+    width: 100%;
+    
+    &::placeholder {
+      color:#DADADA;
+      font-size: 12px;
+    }
+  }
+
+  .input__wrapper{
+    display: inline-block;
+    margin-top: 8px;
+    width: 200px;
+    border-radius: 50px;
+    border: solid 2px #fff;
+    background:g.$primary-grad;
+    margin-top: 32px;
+    cursor: pointer;
+    position: relative;
+
+    &:after{
+      content:'無料会員登録する';
+      display: inline-block;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      z-index: 10;
+      position:absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+
+    input[type="submit"]{
+      color: rgba(0, 0, 0, 0);
+      cursor: pointer;
+      padding: 8px 32px;
+      width: 200px;
+    }
+  }
+
+  .input__wrapper__transparent{
+    display: inline-block;
+    margin-top: 8px;
+    width: 200px;
+    border-radius: 50px;
+    border: solid 2px #54917A;
+    margin-top: 32px;
+    cursor: pointer;
+    position: relative;
+
+    &:after{
+      content:'無料会員登録する';
+      display: inline-block;
+      background: -webkit-linear-gradient(81.39deg, #54917A 3.01%, #6EC0DA 99.68%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 16px;
+      font-weight: 700;
+      z-index: 10;
+      position:absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      }
+
+    input[type="submit"]{
+      color: rgba(0, 0, 0, 0);
+      cursor: pointer;
+      padding: 8px 32px;
+      width: 200px;
+    }
+  }
+}
+
+/* =====================
+  
+  文字の装飾
+
+===================== */
+.primary-color {
+  color: g.$primary-color;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+/* =====================
+  
+  背景
+
+===================== */
+.bg-primary-grad{
+  background:g.$primary-grad;
+}
+
+/* =====================
+  
+  余白
+
+===================== */
+
+.p0{
+  padding: 0 !important;
+}
+
+.pt0{
+  padding-top: 0 !important;
+}
+
+.pb0{
+  padding-bottom: 0 !important;
+}
+
+.mt0{
+  margin-top: 0 !important;
+}
+/* =====================
+  
+  ページネーション
+
+===================== */
+.pager {
+  .pagination {
+    text-align: center;
+
+    li{
+      display: inline;
+      margin: 0 2px;
+      padding: 0;
+      display: inline-block;
+      background:#fff;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      position: relative;
+      border-radius: 50px;
+
+      @include g.sm{
+        display:none;
+      }
+
+      &.pre,
+      &.next{
+        @include g.sm{
+          display: inline-block;
+          width: 40%;
+          height: 36px;
+          text-align: center;
+        }
+
+        a{
+          @include g.sm{
+            width: 100%;
+            text-align: center;
+          } 
+        }
+      }
+
+      &.pre{
+        span{
+          &::after{
+            @include g.sm{
+              content: "前の10件へ";
+            }
+          }
+        }
+      }
+      
+      &.next{
+        span{
+          &::before{
+            @include g.sm{
+              content: "次の10件へ";
+            }
+          }
+        }
+      }
+
+      a{
+        vertical-align: middle;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display:table;
+        color: g.$primary-color;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: all  0.3s ease;
+
+        &:hover,
+        &:active{
+          color: #fff;
+          background: g.$primary-color;
+          border-radius: 50px;
+          transition: all  0.3s ease;
+        }
+
+        span{
+          display:table-cell;
+          vertical-align:middle;
+          line-height: 1;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}  
+
+.more-link{
+  text-decoration: underline;
+  text-align: right;
+}
+
+/* =====================
+  
+  lottie
+
+===================== */
+#loading{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: g.$primary-grad;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  &.completed{
+    display:none;
+
+    #lottie{
+      display: none;
+    }
+  }
+}
+#lottie{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%,-50%);
+
+  @include g.sm{
+    width: 200%;
+  }
+}
+
+/* =====================
+  
+  spのみ対応
+
+===================== */
+
+.sp-scroll-wrapper{
+  overflow-x: scroll;
+  transform: translateZ(0);
+  position: relative;
+  -ms-overflow-style: none;    /* IE, Edge 対応 */
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+  @include g.md{
+    width:100vw; 
+    position: relative;
+    padding-left: 16px;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  &::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+  }
+
+
+  ul{
+    @include g.md{
+      width: 830px;
+    }
+
+    @include g.xs{
+      width:700px;
+      justify-content: flex-start;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+  }
+}

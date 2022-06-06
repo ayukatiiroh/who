@@ -1,0 +1,198 @@
+@use "../global/variable" as g;
+
+.section-style{
+  .section-style__container{
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .section-style__wrapper{
+    margin-top: 60px;
+    width: 100%;
+    gap: 32px;
+
+    @include g.sm{
+      margin-top:32px;
+    }
+  }
+
+  .section-style__item{
+    width: 100%;
+    border: #DFDFDF 1px solid;
+  }
+
+  .item__title{
+    background: g.$primary-grad;
+    padding: 16px 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+
+    @include g.sm{
+      font-size:2rem;
+    }
+  }
+
+  .item__body{
+    width: 100%;
+    padding: 16px 10% 32px;
+
+    @include g.sm{
+      padding: 16px 20px;
+    }
+  }
+
+  .item__description{
+    @include g.sm{
+      text-align:left;
+    }
+  }
+
+  .item__underline{
+    display: inline-block;
+    background:linear-gradient(transparent 60%, #FFF1A8 60%);
+    margin: 32px auto  0;
+  }
+
+  .item__price{
+    text-align: center;
+
+    .price__wrapper{
+      margin-top: 8px;
+      border: solid 1px #C2C2C2;
+      padding: 24px;
+
+      @include g.sm{
+        padding: 16px 24px;
+      }
+    }
+
+    .price{
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: solid 1px g.$black;
+
+      @include g.sm{
+        font-size:28px;
+      }
+    }
+
+    .price__list{
+      text-align:left;
+
+      .price__item{
+        padding-left: 1em;
+        position: relative;
+
+        @include g.sm{
+          padding-left:1em;
+	        text-indent:-1em;
+        }
+
+        &::before{
+          content: "";
+          display: inline-block;
+          width: 1.2rem;
+          height: 1.2rem;
+          border:solid 1px g.$black;
+          margin-right: 0.8rem;
+        }
+      }
+    }
+
+    .annotation{
+      margin-top: 20px;
+      text-align: left;
+    }
+  }
+
+  .item__dropin{
+    text-align: center;
+
+    .dropin__dl-list{
+      .dropin__dl-item{
+        padding: 10px 32px;
+        display:flex;
+
+        @include g.sm{
+          padding: 10px 8px 10px 24px;
+
+        }
+  
+        dt{
+          width: 84px;
+          margin-right: 56px;
+          white-space: nowrap;
+
+          @include g.sm{
+            width: 75px;
+            margin-right: 32px;
+          }
+        }
+  
+        dd{
+          font-size: 20px;
+          font-weight: 700;
+
+          span{
+            font-size: 12px;
+            font-weight: 400;
+            margin-left: 4px;
+          }
+        }
+  
+        &:first-of-type{
+          background: #F0F0F0;
+        }
+        
+        &:not(:first-of-type){
+          border-top: solid 1px #C2C2C2;
+        }
+      }
+    }
+    
+    .dropin__wrapper{
+      border: solid 1px #C2C2C2;
+      margin-top: 8px;
+
+      &+.dropin__wrapper{
+        margin-top: 8px;
+      }
+    }
+
+    .dropin__wrapper-price{
+      text-align: left;
+      padding: 20px 24px 24px;
+
+      @include g.sm{
+        padding: 16px 24px 24px;
+
+      }
+
+      p{
+        margin-top: 6px;
+
+        @include g.sm{
+          margin-top: 4px;
+          
+        }
+      }
+
+      h4{
+        margin-top: 16px;
+
+        @include g.sm{
+          font-size: 2.4rem;
+          margin-top: 8px;
+        }
+      }
+    }
+
+    .annotation{
+      text-align:left;
+      margin-top: 8px;
+    }
+  }
+}

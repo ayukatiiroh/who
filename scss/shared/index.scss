@@ -1,0 +1,8 @@
+//header
+@use '../shared/header';
+
+//footer
+@use '../shared/_footer';
+
+// 特商法ページ&利用規約ページ
+@use '../shared/_terms';

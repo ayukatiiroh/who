@@ -1,0 +1,36 @@
+@use "../global/variable" as g;
+.section-type{
+  background-color: g.$gray;
+
+  .section-type__container{
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .type__contens__list{
+    margin-top: 60px;
+
+    @include g.sm{
+      margin-top: 32px;
+
+    }
+
+
+    .type__contents__img {
+      width: 44%;
+
+      @include g.sm{
+        width:100%;
+      }
+    }
+
+    .type__contents__map{
+      width: 53%;
+
+      @include g.sm{
+        width:100%;
+        margin-top:10px;
+      }
+    }
+  }
+}

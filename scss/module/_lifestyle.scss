@@ -1,0 +1,75 @@
+@use "../global/variable" as g;
+.section-lifestyle{
+  background-color: g.$gray;
+
+  .section-lifestyle__container{
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .lifestyle__list{
+    margin-top: 60px;
+
+    @include g.sm{
+      margin-top: 16px;
+    }
+
+    .lifestyle__list__item{
+      background-color: #fff;
+      display:flex;
+      align-items: center;
+
+      &+.lifestyle__list__item{
+        margin-top: 32px;
+
+        @include g.sm{
+          margin-top: 8px;
+
+        }
+      }
+
+      &:nth-of-type(even){
+        flex-direction: row-reverse;
+
+        @include g.sm{
+          flex-direction:column;
+        }
+      }
+    }
+
+    .lifestyle__list__item__img{
+      width: 46%;
+
+      @include g.sm{
+        width: 100%;
+      }
+    }
+
+    .lifestyle__list__item__text{
+      width: 54%;
+      padding: 32px;
+
+      @include g.sm{
+        width: 100%;
+        padding: 16px;
+      }
+
+      h4{
+        background: g.$primary-grad;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      p{
+        margin-top: 10px;
+
+        @include g.sm{
+          margin-top:8px;
+        }
+      }
+    }
+
+  }
+}
