@@ -2038,7 +2038,7 @@ footer .copyright {
 }
 
 .section-who {
-  background: url("/img/bg-who.jpg");
+  background: url("../img/bg-who.jpg");
   background-size: cover;
   background-position: top left;
   padding-top: 140px;
