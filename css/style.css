@@ -1673,6 +1673,7 @@ form .input__wrapper__transparent input[type=submit] {
   }
 }
 
+/*フッター*/
 footer {
   background: url("../img/bg-footer.jpg") no-repeat center center/cover;
   color: #fff;
@@ -2095,6 +2096,7 @@ footer .copyright {
 .section-who .section-who__body p+p {
   margin-top: 1.6rem;
 }
+
 
 .section-style .section-style__container {
   width: 100%;
@@ -2735,6 +2737,7 @@ footer .copyright {
   }
 }
 
+/*備品セクション*/
 .section-equipment {
   background: linear-gradient(81.39deg, #54917A 3.01%, #6EC0DA 99.68%);
 }
@@ -2791,6 +2794,7 @@ footer .copyright {
   }
 }
 
+/*ボイスセクション*/
 .section-voice {
   background-color: #F6F6F6;
 }
@@ -3087,6 +3091,100 @@ footer .copyright {
 .section-cta form .annotation {
   font-size: 12px;
 }
+
+/*アクセスセクション*/
+
+.section-access .section-acces__container {
+  max-width: 1040px;
+  margin: 0 auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 767px) {
+  .section-access .access__item {
+    width: 100%;
+  }
+}
+
+.section-access .access__item__text p {
+  margin-top: 16px;
+}
+
+
+.section-access__detail-container {}
+
+.section-access .section-access__detail-container {
+  width: calc(100% - 20px);
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch !important;
+  --visible-count: 1;
+  overflow: auto !important;
+  white-space: nowrap;
+}
+
+.section-access .section-access__detail-container .access__detail {
+  width: 300px;
+  white-space: initial;
+  display: inline-block;
+  padding: 20px 40px 0 0px;
+  box-sizing: border-box;
+  background-image: url(https://icongr.am/jam/chevron-right.svg?size=30&color=000000);
+  background-repeat: no-repeat;
+  background-position: 268px 100px;
+  vertical-align: text-top;
+}
+
+.section-access .section-access__detail-container h3 {}
+
+.section-access .section-access__detail-container .access__detail-end {
+  width: 300px;
+  white-space: initial;
+  display: inline-block;
+  padding: 20px 40px 0 0px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: 268px 100px;
+  vertical-align: text-top;
+}
+
+
+.section-access .section-access__detail-container .access__detail img {
+  border-radius: 4px;
+}
+
+.section-access .section-access__detail-container .access__detail-arrow {}
+
+.section-access .section-access__detail-container .access__detail li {
+  margin: 40px;
+}
+
+
+@media screen and (max-width: 767px) {
+  .section-access .equipment__item__img-list {
+    margin-top: 16px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    padding: 32px 8px;
+  }
+}
+
+.section-access .equipment__item__img-list .equipment__item__img-item {
+  width: 90%;
+}
+
+@media screen and (max-width: 767px) {
+  .section-access .equipment__item__img-list .equipment__item__img-item {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 
 .section-faq .section-faq__container {
   max-width: 940px;
