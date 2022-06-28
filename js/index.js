@@ -130,4 +130,3 @@ $(function() {
     $('#loading').fadeOut(600);
   }, 5000);
 });
-

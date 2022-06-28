@@ -3094,30 +3094,40 @@ footer .copyright {
 
 /*アクセスセクション*/
 
-.section-access .section-acces__container {
-  max-width: 1040px;
+.section-access {
   margin: 0 auto;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  max-width: 1280px;
 }
 
 
-@media screen and (max-width: 767px) {
-  .section-access .access__item {
-    width: 100%;
-  }
-}
-
-.section-access .access__item__text p {
-  margin-top: 16px;
+.section-access .section-access__container {
+  padding: 60px 0 60px 0;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
 }
 
 
-.section-access__detail-container {}
+.section-access .section-access__container .access__text {
+  width: 100%;
+}
+
+.section-access .section-access__container .access__text p {
+  margin: 8px 0 16px 0;
+}
+
+.section-access .section-access__container .access__map {
+  width: 100%;
+}
+
+
+.section-access__detail-title h3 {
+  margin: 0 auto;
+}
 
 .section-access .section-access__detail-container {
-  width: calc(100% - 20px);
+  padding: 0 0 60px 0;
+  width: calc(112% - 20px);
   -ms-flex-align: center;
   align-items: center;
   outline: none;
@@ -3166,24 +3176,21 @@ footer .copyright {
 
 
 @media screen and (max-width: 767px) {
-  .section-access .equipment__item__img-list {
-    margin-top: 16px;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    padding: 32px 8px;
+  .section-access .section-access__container {
+    display: block;
+    margin: 0 auto;
+    padding: 32px 0 32px 0;
   }
-}
-
-.section-access .equipment__item__img-list .equipment__item__img-item {
-  width: 90%;
 }
 
 @media screen and (max-width: 767px) {
-  .section-access .equipment__item__img-list .equipment__item__img-item {
-    width: 80%;
+  .section-access .section-access__container .access__text {
+    padding: 0 0 32px 0;
     margin: 0 auto;
+    width: 90%;
   }
 }
+
 
 
 .section-faq .section-faq__container {
