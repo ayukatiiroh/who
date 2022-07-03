@@ -3116,8 +3116,23 @@ footer .copyright {
   margin: 8px 0 16px 0;
 }
 
-.section-access .section-access__container .access__map {
-  width: 100%;
+@media screen and (max-width: 767px) {
+  .section-access .section-access__container .access__map {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    /* = height ÷ width × 100 */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section-access .section-access__container .access__map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 
