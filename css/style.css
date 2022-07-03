@@ -67,10 +67,20 @@ var {
   font-weight: normal;
 }
 
-ol,
 ul {
   list-style: none;
 }
+
+ol {
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
 
 caption,
 th {
@@ -1792,13 +1802,13 @@ footer .copyright {
   }
 }
 
+.terms-list {
+  margin-top: 16px;
+}
+
 .terms .list__title {
   font-weight: 700;
   font-size: 2rem;
-}
-
-.terms .terms-item.terms-item {
-  margin-top: 16px;
 }
 
 .terms .paragraph+.paragraph {
@@ -1808,6 +1818,24 @@ footer .copyright {
 .terms .enactment__day {
   margin-top: 16px;
 }
+
+.term-number {
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+display: block;
+list-style-type: decimal;
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+padding-inline-start: 40px;
 
 .fv {
   background: url("../img/bg-fv.jpg") no-repeat center bottom/cover;
